@@ -1,0 +1,189 @@
+    if (applicationDetails.getRegFlag().equalsIgnoreCase("Reg")) {
+				query = JavaConstant.QUERY169_ADMIN_FSSAI_CONSOLE_SEARCH_STATE_REG_NEW;
+			} else {
+				//jira 6552 adding isNonFormCModification
+				query = JavaConstant.QUERY168_ADMIN_FSSAI_CONSOLE_SEARCH_STATE_NEW;
+		}
+		
+		
+		
+		public static final String GET_IMP_NOTICE_LOGS = "SELECT flin.imp_notice_id AS \"impNoticeId\", flin.license_no AS \"licenseNo\", flin.imp_notice_no AS \"impNoticeNo\", flin.imp_notice_doc_path AS \"impNoticeDocPath\", flin.no_of_days_granted AS \"noOfDaysGranted\", flin.verified_flag AS \"verifiedFlag\", flin.status_id AS \"statusId\", to_char(flin.created_on,'dd-MM-yyyy') AS \"createdOn\", flin.created_by AS \"createdBy\", to_char(flin.updated_on,'dd-MM-yyyy') AS \"updatedOn\", flin.updated_by AS \"updatedBy\", flin.submitted_flag AS \"submittedFlag\", flin.ground_remarks AS \"groundRemarks\", flin.matter_remarks AS \"matterRemarks\", flin.corrective_measure_remarks AS \"correctiveMeasureRemarks\", flin.final_remarks AS \"finalRemarks\", flin.system_generated_flag AS \"systemGeneratedFlag\", flin.signature_type AS \"signatureType\", flin.signature_value AS \"signatureValue\", flin.ip_address AS \"ipAddress\", flin.signature_verified_on AS \"signatureVerifiedOn\", flin.tata_doc_path AS \"tataDocPath\", flin.document_not_found_flag AS \"documentNotFoundFlag\", flin.compress_document_path AS \"compressDocumentPath\", flin.compress_document_not_found AS \"compressDocumentNotFound\", flin.backup_document_path AS \"backupDocumentPath\", flin.sample_action_flag AS \"sampleActionFlag\", flin.improvement_notice_type AS \"improvementNoticeType\", flin.imp_notice_mail_sent_flag AS \"impNoticeMailSentFlag\", flin.misleading_report_id AS \"misleadingReportId\", fad.company_name AS \"companyName\" FROM fbo_license_improvement_notice flin INNER JOIN fbo_license fl ON flin.license_no = fl.license_no AND fl.current_license_flag = TRUE INNER JOIN fbo_application_details fad ON fad.ref_id = fl.ref_id  ";
+
+
+&& !applicationDetails.getRegFlag().equalsIgnoreCase("Reg")
+
+
+assignee = currentUser() AND status not IN (Closed, Resolved) and project=FoSCoS ORDER BY updated DESC
+
+
+SELECT flin.imp_notice_id AS \"impNoticeId\", flin.license_no AS \"licenseNo\", flin.imp_notice_no AS \"impNoticeNo\", flin.imp_notice_doc_path AS \"impNoticeDocPath\", flin.no_of_days_granted AS \"noOfDaysGranted\", flin.verified_flag AS \"verifiedFlag\", flin.status_id AS \"statusId\", to_char(flin.created_on,'dd-MM-yyyy') AS \"createdOn\", flin.created_by AS \"createdBy\", to_char(flin.updated_on,'dd-MM-yyyy') AS \"updatedOn\", flin.updated_by AS \"updatedBy\", flin.submitted_flag AS \"submittedFlag\", flin.ground_remarks AS \"groundRemarks\", flin.matter_remarks AS \"matterRemarks\", flin.corrective_measure_remarks AS \"correctiveMeasureRemarks\", flin.final_remarks AS \"finalRemarks\", flin.system_generated_flag AS \"systemGeneratedFlag\", flin.signature_type AS \"signatureType\", flin.signature_value AS \"signatureValue\", flin.ip_address AS \"ipAddress\", flin.signature_verified_on AS \"signatureVerifiedOn\", flin.tata_doc_path AS \"tataDocPath\", flin.document_not_found_flag AS \"documentNotFoundFlag\", flin.compress_document_path AS \"compressDocumentPath\", flin.compress_document_not_found AS \"compressDocumentNotFound\", flin.backup_document_path AS \"backupDocumentPath\", flin.sample_action_flag AS \"sampleActionFlag\", flin.improvement_notice_type AS \"improvementNoticeType\", flin.misleading_report_id AS \"misleadingReportId\", fad.company_name AS \"companyName\"  from fbo_registration_improvement_notice fa inner join fbo_registration_certificates fl on fa.certificate_no=fl.certificate_no and fl.current_certificate_flag=true inner join fbo_registration_details fad on fl.ref_id=fad.ref_id
+
+
+
+
+style="background: #E5FFD4;"
+
+
+
+#C4C4C4 !important
+
+border-radius: 5px;
+
+
+
+
+<div>
+                                            <input type="file" id="fileInput" (change)="selectFileForDocs($event,1)"
+                                                class="form-control" #fileUpload accept=".pdf,.jpg,.jpeg,.png" hidden>
+                                            <label *ngIf="this.tempfile == null" for="fileInput"
+                                                class="custom-file-label">
+                                                <i><img src="/public/assets/img/ri-upload-cloud-2-line.png"></i> Browse
+                                                File
+                                            </label>
+                                            <!-- <p style="color:red;margin-top:3px; ">(Allowed:5MB, Type: pdf, jpeg, jpg, png)</p> -->
+                                        </div>
+                                        <div class="uploadfile" *ngIf="this.tempfile != null">
+
+
+                                        <div class="file-container" style="width:auto!important">
+                                          <div class="file-name">
+                                            <a [href]="tempfile" target="_blank">{{ fileName }}</a>
+                                          </div>
+                                          <div class="delete-icon" *ngIf="this.tempfile != null">
+                                            <a (click)="ondelete()">
+                                              <img src="/public/assets/img/ri-close-fill.png" alt="Delete">
+                                            </a>
+                                          </div>
+                                        </div>
+
+
+
+
+
+
+
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div>
+                                            <input type="file" id="fileInputAudit" (change)="selectFileForDocsAuditing($event,1)" class="form-control" formControlName="certificate" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                                            <label *ngIf="this.tempfileAuditing == null" for="fileInputAudit" class="custom-file-label">
+                                              <i><img src="/public/assets/img/ri-upload-cloud-2-line.png"></i> Browse File
+                                          </label>
+                                        </div>
+                                          <div class="uploadfile" *ngIf="this.tempfileAuditing != null">
+                                            <div class="file-container" style="width:auto!important">
+                                              <div class="file-name">
+                                                <a [href]="tempfileAuditing" target="_blank">{{ fileNameAuditing }}</a>
+                                              </div>
+                                              <div class="delete-icon" *ngIf="this.tempfileAuditing != null">
+                                                <a (click)="ondeleteAuditing()">
+                                                  <img src="/public/assets/img/ri-close-fill.png" alt="Delete">
+                                                </a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        <div class="col-12" *ngIf="auditingForm.controls['certificate']?.errors">
+                                            <span class="text-danger" *ngIf="submittedAuditing && auditingForm.controls.certificate?.errors?.required">
+                                              This is required
+                                            </span>
+                                          </div>
+                                    </div>
+                                </div>
+								
+								
+								
+								 selectedFileAuditing: any = null;
+    tempfileAuditing: any = null;
+    fileNameAuditing:any;
+    selectFileForDocsAuditing(event: any, file: number) {
+      if (event.target.files.length > 0) {
+        const selectedFile: File = event.target.files[0];
+        const allowedTypes = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png'];
+        const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+    
+        // Validate file type
+        if (!allowedTypes.includes(selectedFile.type)) {
+          this.toastrService.error("Please upload a PDF, JPG, jpeg or PNG file.");
+          event.target.value = ''; 
+          return;
+        }
+    
+        // Validate file size
+        if (selectedFile.size > maxSize) {
+          this.toastrService.error("File size exceeds 5MB. Please upload a smaller file.");
+          event.target.value = ''; 
+          return;
+        }
+      }
+      const selectedFileInput = event.target.files[0];
+      const fileUploaded: File = event.target.files[0];
+      this.selectedFileAuditing = fileUploaded;
+      this.tempfileAuditing = this.sanitizer.bypassSecurityTrustUrl(window.URL.createObjectURL(event.target.files[0]));
+      this.fileNameAuditing = selectedFileInput.name;
+    }
+    ondeleteAuditing() {
+      this.tempfileAuditing = null
+      this.selectedFileAuditing=null
+    }
+	
+	
+	
+	this.applicantSandbox.getUserDetail().roles[0].roleId==23
+	
+	this.applicantSandbox.getUserDetail().userDetails.name
+	
+	10210201102301521/10016065000093
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	selectFileForDocs
+	ondelete
+	
+	
+	                                    <div>
+                                            <input type="file" id="fileInput" (change)="onFileSelected($event, sub)"
+                                                class="form-control" #fileUpload accept=".pdf,.jpg,.jpeg,.png" hidden>
+                                            <label *ngIf="this.tempfile == null" for="fileInput"
+                                                class="custom-file-label">
+                                                <i><img src="/public/assets/img/ri-upload-cloud-2-line.png"></i> Browse
+                                                File
+                                            </label>
+                                            <!-- <p style="color:red;margin-top:3px; ">(Allowed:5MB, Type: pdf, jpeg, jpg, png)</p> -->
+                                        </div>
+                                        <div class="uploadfile" *ngIf="this.tempfile != null">
+
+
+                                        <div class="file-container" style="width:auto!important">
+                                          <div class="file-name">
+                                            <a [href]="tempfile" target="_blank">{{ fileName }}</a>
+                                          </div>
+                                          <div class="delete-icon" *ngIf="this.tempfile != null">
+                                            <a (click)="ondelete()">
+                                              <img src="/public/assets/img/ri-close-fill.png" alt="Delete">
+                                            </a>
+                                          </div>
+                                        </div>
+										
+										
+										
+										
+										<td class="border border-gray-400 p-2">
+  <input type="file" multiple (change)="onFileSelected($event, sub)" />
+
+  <ul *ngIf="sub.supportingDocs?.length" class="mt-1">
+    <li *ngFor="let file of sub.supportingDocs; let i = index" class="flex items-center justify-between text-xs border-b">
+      <a [href]="getFileUrl(file)" target="_blank" class="text-blue-600 underline">
+        📎 {{ file.name }}
+      </a>
+      <button (click)="removeFile(sub, i)" class="text-red-500 ml-2">❌</button>
+    </li>
+  </ul>
+</td>
